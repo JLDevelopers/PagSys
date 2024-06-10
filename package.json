@@ -1,0 +1,36 @@
+{
+  "name": "projetofinal",
+  "version": "1.0.0",
+  "description": "Projeto Sec+DesignP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./app.js localhost 3000 "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JLDevelopers/PagSys.git"
+  },
+  "author": "Julio Plaza",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JLDevelopers/PagSys/issues"
+  },
+  "homepage": "https://github.com/JLDevelopers/PagSys#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "bootstrap": "^5.3.3",
+    "chalk": "^5.3.0",
+    "express": "^4.19.2",
+    "express-handlebars": "^7.1.2",
+    "express-session": "^1.18.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.10.0",
+    "sequelize": "^6.37.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.3"
+  }
+}
