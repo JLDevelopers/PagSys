@@ -1,0 +1,24 @@
+{{!< main}}
+
+<div class="container mt-5">
+    <h1 class="mb-4">Cursos Disponíveis</h1>
+
+    {{#if cursos.length}}
+        <div class="row">
+            {{#each cursos}}
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{nome}}</h5>
+                            <p class="card-text">{{descricao}}</p>
+                            <p class="card-text"><strong>Valor:</strong> R$ {{valor}}</p>
+                            <a href="#" class="btn btn-primary">Matricular-se</a>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    {{else}}
+        <p>Não há cursos disponíveis no momento.</p>
+    {{/if}}
+</div>
