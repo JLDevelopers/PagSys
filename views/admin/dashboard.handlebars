@@ -1,0 +1,68 @@
+<!-- views/admin/dashboard.handlebars -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Admin</title>
+    <!-- Adicione links para os estilos do Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Admin Dashboard</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin/logout">Sair</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Visualização e gerenciamento de usuários -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">Usuários</div>
+                    <div class="card-body">
+                        <a href="/admin/clientes" class="btn btn-primary btn-block">Visualizar Usuários</a>
+                        <a href="/admin/clientes/novo" class="btn btn-success btn-block">Adicionar Novo Usuário</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Visualização e gerenciamento de cursos -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">Cursos</div>
+                    <div class="card-body">
+                        <a href="/admin/produtos" class="btn btn-primary btn-block">Visualizar Cursos</a>
+                        <a href="/admin/produtos/novo" class="btn btn-success btn-block">Adicionar Novo Curso</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Visualização e gerenciamento de pagamentos -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">Pagamentos</div>
+                    <div class="card-body">
+                        <a href="/admin/pagamentos" class="btn btn-primary btn-block">Visualizar Pagamentos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Adicione scripts do Bootstrap e jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
