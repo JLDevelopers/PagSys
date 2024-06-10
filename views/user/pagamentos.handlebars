@@ -1,0 +1,32 @@
+{{!< main}}
+
+<div class="container mt-5">
+    <h1 class="mb-4">Meus Pagamentos</h1>
+
+    {{#if pagamentos.length}}
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Curso</th>
+                        <th scope="col">Data de Pagamento</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each pagamentos}}
+                        <tr>
+                            <th scope="row">{{id}}</th>
+                            <td>{{nome_curso}}</td>
+                            <td>{{formatDate data_pagamento}}</td>
+                            <td>{{status}}</td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    {{else}}
+        <p>Não há pagamentos registrados.</p>
+    {{/if}}
+</div>

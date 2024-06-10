@@ -1,0 +1,53 @@
+{{!< main}}
+
+<div class="container mt-5">
+    <h1 class="mb-4">Dashboard do Usuário</h1>
+    <p>Bem-vindo, {{user.nome}}!</p>
+
+    <div class="card mt-3">
+        <div class="card-header">
+            Meus Cursos
+        </div>
+        <div class="card-body">
+            {{#if cursos.length}}
+                <ul>
+                    {{#each cursos}}
+                        <li>{{nome}}</li>
+                    {{/each}}
+                </ul>
+            {{else}}
+                <p>Você ainda não está matriculado em nenhum curso.</p>
+            {{/if}}
+        </div>
+    </div>
+
+    <div class="card mt-3">
+        <div class="card-header">
+            Meus Pagamentos
+        </div>
+        <div class="card-body">
+            {{#if pagamentos.length}}
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Curso</th>
+                            <th>Data de Pagamento</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each pagamentos}}
+                            <tr>
+                                <td>{{curso.nome}}</td>
+                                <td>{{data_pagamento}}</td>
+                                <td>{{status}}</td>
+                            </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            {{else}}
+                <p>Você não possui pagamentos registrados.</p>
+            {{/if}}
+        </div>
+    </div>
+</div>

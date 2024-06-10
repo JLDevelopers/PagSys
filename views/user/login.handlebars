@@ -1,0 +1,26 @@
+{{!< main}}
+
+{{#if error}}
+    <div class="alert alert-danger" role="alert">
+        {{error}}
+    </div>
+{{/if}}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 class="mb-4">Login do Usuário</h2>
+            <form action="/user/login" method="post">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" class="form-control" id="senha" name="senha" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
